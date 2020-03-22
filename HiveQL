@@ -1,0 +1,13 @@
+CREATE TABLE klse (TradeDate STRING, SectorNum INT, SectorName STRING, StockCode STRING, StockName STRING, RefPrice DECIMAL, OpenPrice DECIMAL, LastPrice DECIMAL, ChangePrice DECIMAL, ChangePC DECIMAL, Volume INT) 
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ',';
+
+
+LOAD DATA LOCAL INPATH '/home/student/wqd7005/MS2/klse.csv' OVERWRITE INTO TABLE klse;
+
+SELECT * FROM klse;
+
+SELECT * FROM klse WHERE StockCode=5398;
+
+
+
+
